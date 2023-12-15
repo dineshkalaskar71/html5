@@ -1,0 +1,17 @@
+  centers.sort((a, b) => a.DisplayOrder - b.DisplayOrder);
+
+        var output = "";
+
+        for (let item of centers) {
+            output += `
+                <div class="product">
+                   <p class="title">${item.CenterName}</p>
+                   <p class="description">${item.DetailDescriptionOWSMTXT}</p>
+                   <div class="button-container1">
+                    <p>View details</p>
+                  </div>
+                </div>
+            `;
+        }
+
+        document.querySelector(".products").innerHTML = output;
